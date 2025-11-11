@@ -98,6 +98,11 @@
             }
           })(document, "script", "weatherwidget-io-js");
         </script>
+        <script>
+          document
+            .querySelectorAll("[data-year]")
+            .forEach((el) => (el.textContent = new Date().getFullYear()));
+        </script>
         <!--JS Scripts-->
         <script type="text/javascript" src="./assets/js/menu.js"></script>
         <!--Mobile menu JS-->
