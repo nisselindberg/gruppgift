@@ -5,65 +5,77 @@
     <title>Who we are – Google News</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bas-styles från projektet -->
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bas-styles -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <!-- Sida-specifik SCSS (Parcel kompilerar) -->
+    <!-- Sida-specifik SCSS -->
     <link rel="stylesheet" href="./assets/css/sass/whoweare.scss" />
   </head>
 
   <body>
     <section id="wrapper" role="main">
-      <!-- Header / meny -->
-      <header id="header" class="header" role="banner">
-        <h1 class="logo">Google News</h1>
-        <nav id="menu" class="menu" aria-label="Huvudmeny">
-          <ul>
-            <li><a href="./index.html">What we do</a></li>
-            <li>
-              <a class="current" aria-current="page" href="./whoweare.html"
-                >Who we are</a
-              >
-            </li>
-            <li><a href="#">Customers</a></li>
-            <li><a href="#">Career</a></li>
-            <li><a href="#">IR</a></li>
-            <li><a href="#">Latest</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <li class="search">
-              <input
-                type="text"
-                id="searchInput"
-                placeholder="Search articles"
-                aria-label="Search articles"
-              />
-            </li>
-            <li class="icon">
-              <a
-                href="javascript:void(0);"
-                onclick="menuFunction()"
-                aria-label="Open mobile menu"
-                >&#9776;</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <!-- Header -->
+      <header id="header" class="header">
+  <h1>Google News</h1>
+  <nav id="menu" class="menu">
+    <ul>
+      <li>
+        <a href="/Offerings">What we do</a>
+      </li>
+      <li>
+        <a href="whoweare.html" class="current">Who we are</a>
+      </li>
+      <li>
+        <a href="/Customers">Customers</a>
+      </li>
+      <li>
+        <a href="career.html">Career</a>
+      </li>
+      <li>
+        <a href="/Investor-relations">IR</a>
+      </li>
+      <li>
+        <a href="/Latest">Latest</a>
+      </li>
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+      <li class="search">
+        <input
+          type="text"
+          id="searchInput"
+          onkeyup="searchFunction()"
+          placeholder="Search titles"
+          title="Type in title search term"
+        />
+      </li>
+      <li class="icon">
+        <a href="javascript:void(0);" onclick="menuFunction()">&#9776;</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
 
       <main id="main" tabindex="-1">
-        <!-- Hero-bild -->
+        <!-- Hero -->
         <figure class="hero" aria-labelledby="hero-title">
+          </figcaption>
           <img
             src="https://picsum.photos/1600/420?random=21"
-            alt="Person som läser dagstidning i kvällsljus"
+            alt="Person som läser tidning i kvällsljus"
           />
-          <figcaption id="hero-title" class="visually-hidden">
-            Our story & team
-          </figcaption>
+          <figcaption id="hero-title" class="visually-hidden">Our story & team</figcaption>
         </figure>
 
-        <!-- KPI/metrics -->
+        <!-- KPI / Metrics -->
         <section class="metrics container" aria-labelledby="metrics-title">
           <h2 id="metrics-title" class="visually-hidden">Key figures</h2>
           <dl class="kpis">
@@ -113,7 +125,7 @@
           </div>
         </section>
 
-        <!-- Team (5 kol på desktop) -->
+        <!-- Team -->
         <section class="team container" aria-labelledby="team-title">
           <h2 id="team-title">Meet the team</h2>
           <div class="team-grid">
@@ -153,7 +165,6 @@
               />
               <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
             </figure>
-
             <figure class="person">
               <img
                 src="https://picsum.photos/380/220?random=36"

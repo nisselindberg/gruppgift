@@ -20,6 +20,26 @@ $bp-sm: 560px;
 
 $shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
 
+/* === Hero (centrerad och något bredare) === */
+.hero {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110vw; /* 110% av viewportens bredd */
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    width: 100vw; /* på mobil ska den inte sticka ut */
+  }
+}
+
+
 /* ===== Mixins ===== */
 @mixin container {
   width: min(100% - 32px, $container);
