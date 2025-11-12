@@ -4,71 +4,49 @@
     <meta charset="utf-8" />
     <title>Who we are – Google News</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Bas-styles -->
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-
-    <!-- Sida-specifik SCSS -->
-    <link rel="stylesheet" href="./assets/css/sass/whoweare.scss" />
+    <!--Stylesheets (identisk fontimport som index)-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Playfair+Display:400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
   </head>
-
   <body>
-    <section id="wrapper" role="main">
-      <!-- Header -->
-      <header id="header" class="header" role="banner">
-        <h1 class="logo">Google News</h1>
-        <nav id="menu" class="menu" aria-label="Huvudmeny">
+    <section role="main" id="wrapper">
+      <!--Header (identisk markup som index, med current på Who we are)-->
+      <header id="header" class="header">
+        <h1>Google News</h1>
+        <nav id="menu" class="menu">
           <ul>
-            <li><a href="./index.html">What we do</a></li>
-            <li>
-              <a class="current" aria-current="page" href="./whoweare.html"
-                >Who we are</a
-              >
-            </li>
-            <li><a href="#">Customers</a></li>
-            <li><a href="#">Career</a></li>
-            <li><a href="#">IR</a></li>
-            <li><a href="#">Latest</a></li>
-            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="/Offerings">What we do</a></li>
+            <li><a href="whoweare.html" class="current">Who we are</a></li>
+            <li><a href="/Customers">Customers</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="/Investor-relations">IR</a></li>
+            <li><a href="/Latest">Latest</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li class="search">
               <input
                 type="text"
                 id="searchInput"
-                placeholder="Search articles"
-                aria-label="Search articles"
+                onkeyup="searchFunction()"
+                placeholder="Search titles"
+                title="Type in title search term"
               />
             </li>
             <li class="icon">
-              <a
-                href="javascript:void(0);"
-                onclick="menuFunction()"
-                aria-label="Open mobile menu"
-                >&#9776;</a
-              >
+              <a href="javascript:void(0);" onclick="menuFunction()">&#9776;</a>
             </li>
           </ul>
         </nav>
       </header>
 
       <main id="main" tabindex="-1">
-        <!-- Hero -->
+        <!--Hero-->
         <figure class="hero" aria-labelledby="hero-title">
-          </figcaption>
-          <img
-            src="https://picsum.photos/1600/420?random=21"
-            alt="Person som läser tidning i kvällsljus"
-          />
+          <img src="https://picsum.photos/1600/340?random=21" alt="Person som läser tidning i kvällsljus" />
           <figcaption id="hero-title" class="visually-hidden">Our story & team</figcaption>
         </figure>
 
-        <!-- KPI / Metrics -->
+        <!--KPI / Metrics-->
         <section class="metrics container" aria-labelledby="metrics-title">
           <h2 id="metrics-title" class="visually-hidden">Key figures</h2>
           <dl class="kpis">
@@ -91,122 +69,84 @@
           </dl>
         </section>
 
-        <!-- Our Story -->
+        <!--Our Story-->
         <section class="story container" aria-labelledby="story-title">
           <h2 id="story-title">Our Story</h2>
           <div class="prose">
             <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit.
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+              eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+              voluptatem quia voluptas sit aspernatur aut odit aut fugit.
             </p>
             <p>
-              Sed quia consequuntur magni dolores eos qui ratione voluptatem
-              sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
-              dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-              eius modi tempora incidunt ut labore et dolore magnam aliquam
-              quaerat voluptatem.
+              Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
+              ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+              dolore magnam aliquam quaerat voluptatem.
             </p>
             <p>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores et quas molestias excepturi sint occaecati cupiditate non
-              provident.
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+              corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
             </p>
           </div>
         </section>
 
-        <!-- Team -->
+        <!--Team-->
         <section class="team container" aria-labelledby="team-title">
           <h2 id="team-title">Meet the team</h2>
           <div class="team-grid">
-            <!-- 10 platshållare -->
+            <!-- 10 placeholders -->
             <figure class="person">
-              <img
-                src="https://picsum.photos/380/220?random=31"
-                alt="Team member"
-              />
+              <img src="https://picsum.photos/380/220?random=31" alt="Team member" />
               <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
             </figure>
             <figure class="person">
-              <img
-                src="https://picsum.photos/380/220?random=32"
-                alt="Team member"
-              />
+              <img src="https://picsum.photos/380/220?random=32" alt="Team member" />
               <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
             </figure>
             <figure class="person">
-              <img
-                src="https://picsum.photos/380/220?random=33"
-                alt="Team member"
-              />
+              <img src="https://picsum.photos/380/220?random=33" alt="Team member" />
               <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
             </figure>
             <figure class="person">
-              <img
-                src="https://picsum.photos/380/220?random=34"
-                alt="Team member"
-              />
+              <img src="https://picsum.photos/380/220?random=34" alt="Team member" />
               <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
             </figure>
             <figure class="person">
-              <img
-                src="https://picsum.photos/380/220?random=35"
-                alt="Team member"
-              />
+              <img src="https://picsum.photos/380/220?random=35" alt="Team member" />
               <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
             </figure>
             <figure class="person">
-              <img
-                src="https://picsum.photos/380/220?random=36"
-                alt="Team member"
-              />
+              <img src="https://picsum.photos/380/220?random=36" alt="Team member" />
               <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
             </figure>
             <figure class="person">
-              <img
-                src="https://picsum.photos/380/220?random=37"
-                alt="Team member"
-              />
+              <img src="https://picsum.photos/380/220?random=37" alt="Team member" />
               <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
             </figure>
             <figure class="person">
-              <img
-                src="https://picsum.photos/380/220?random=38"
-                alt="Team member"
-              />
+              <img src="https://picsum.photos/380/220?random=38" alt="Team member" />
               <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
             </figure>
             <figure class="person">
-              <img
-                src="https://picsum.photos/380/220?random=39"
-                alt="Team member"
-              />
+              <img src="https://picsum.photos/380/220?random=39" alt="Team member" />
               <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
             </figure>
             <figure class="person">
-              <img
-                src="https://picsum.photos/380/220?random=40"
-                alt="Team member"
-              />
+              <img src="https://picsum.photos/380/220?random=40" alt="Team member" />
               <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
             </figure>
           </div>
         </section>
       </main>
 
-      <!-- Footer -->
+      <!--Footer (identisk som index)-->
       <footer class="site-footer" role="contentinfo">
         <div class="container footer-grid">
           <div>
             <h3>About us</h3>
             <ul>
               <li><a href="./index.html">What we do</a></li>
-              <li>
-                <a href="./whoweare.html" aria-current="page">Who we are</a>
-              </li>
+              <li><a href="./whoweare.html" aria-current="page">Who we are</a></li>
             </ul>
           </div>
           <div>
@@ -221,18 +161,19 @@
             <address>Google street 2,<br />526 42 Googleville</address>
           </div>
           <div class="copy">
-            <small>Copyright 2022<span data-year></span> Google News</small>
+            <small>Copyright 2022–<span data-year></span> Google News</small>
           </div>
         </div>
       </footer>
 
+      <!--JS (identiskt upplägg som index)-->
       <script>
         document
           .querySelectorAll("[data-year]")
           .forEach((el) => (el.textContent = new Date().getFullYear()));
       </script>
-      <script src="./assets/js/menu.js"></script>
-      <script src="./assets/js/request.js"></script>
+      <script type="text/javascript" src="./assets/js/menu.js"></script>
+      <script type="text/javascript" src="./assets/js/request.js"></script>
     </section>
   </body>
 </html>
