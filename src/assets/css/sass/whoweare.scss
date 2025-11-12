@@ -16,6 +16,15 @@ $bp-sm: 560px;
 
 $shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
 
+/* === Header/Menu fix för helbredd === */
+#header nav#menu {
+  display: block;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding-left: 5%;
+  padding-right: 0;
+}
 /* ===== Mixins ===== */
 @mixin container {
   width: min(100% - 32px, $container);
