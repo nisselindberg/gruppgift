@@ -1,3 +1,13 @@
+// --- variables (snabbfix) ---
+$light-grey: #ccc !default;
+
+// --- mixins (om du följde min tidigare fix) ---
+@mixin size($w, $h) {
+  width: if(type-of($w) == 'number' and unit($w) == '', $w * 1px, $w);
+  height: if(type-of($h) == 'number' and unit($h) == '', $h * 1px, $h);
+}
+
+
 /*! HEADER STYLES */
 
 #header {
