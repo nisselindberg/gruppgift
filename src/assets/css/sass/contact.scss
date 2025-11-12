@@ -15,6 +15,20 @@ $bp-md: 768px;
 $bp-sm: 560px;
 
 $shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+#header nav#menu ul { display: block !important; }
+#header nav#menu ul li { margin: 0 1% !important; }
+#header nav#menu a { letter-spacing: normal !important; padding: 0 !important; }
+
+/* === Header/Menu fix för helbredd === */
+#header nav#menu {
+  display: block;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding-left: 5%;
+  padding-right: 0;
+  
+}
 
 /* === Hero (centrerad och något bredare) === */
 .hero {
