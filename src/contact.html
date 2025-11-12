@@ -4,48 +4,74 @@
     <meta charset="utf-8" />
     <title>Contact – Google News</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--Stylesheets (identisk fontimport som index)-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Playfair+Display:400,700" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/css/reset.css" type="text/css" />
-    <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
-  </head>
-  <body>
-    <section role="main" id="wrapper">
-      <!--Header (identisk markup som index, med current på Contact)-->
-      <header id="header" class="header">
-        <h1>Google News</h1>
-        <nav id="menu" class="menu">
-          <ul>
-            <li><a href="/Offerings">What we do</a></li>
-            <li><a href="whoweare.html">Who we are</a></li>
-            <li><a href="/Customers">Customers</a></li>
-            <li><a href="career.html">Career</a></li>
-            <li><a href="/Investor-relations">IR</a></li>
-            <li><a href="/Latest">Latest</a></li>
-            <li><a href="contact.html" class="current">Contact</a></li>
-            <li class="search">
-              <input
-                type="text"
-                id="searchInput"
-                onkeyup="searchFunction()"
-                placeholder="Search titles"
-                title="Type in title search term"
-              />
-            </li>
-            <li class="icon">
-              <a href="javascript:void(0);" onclick="menuFunction()">&#9776;</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
 
-      <!--Hero-->
+    <!-- Befintliga bas-styles -->
+     <!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Sida-specifik SCSS -->
+    <link rel="stylesheet" href="./assets/css/sass/contact.scss" />
+  </head>
+
+  <body>
+    <section id="wrapper" role="main">
+      <!-- Header / meny -->
+      <header id="header" class="header">
+  <h1>Google News</h1>
+  <nav id="menu" class="menu">
+    <ul>
+      <li>
+        <a href="/Offerings">What we do</a>
+      </li>
+      <li>
+        <a href="whoweare.html">Who we are</a>
+      </li>
+      <li>
+        <a href="/Customers">Customers</a>
+      </li>
+      <li>
+        <a href="career.html">Career</a>
+      </li>
+      <li>
+        <a href="/Investor-relations">IR</a>
+      </li>
+      <li>
+        <a href="/Latest">Latest</a>
+      </li>
+      <li>
+        <a href="contact.html" class="current">Contact</a>
+      </li>
+      <li class="search">
+        <input
+          type="text"
+          id="searchInput"
+          onkeyup="searchFunction()"
+          placeholder="Search titles"
+          title="Type in title search term"
+        />
+      </li>
+      <li class="icon">
+        <a href="javascript:void(0);" onclick="menuFunction()">&#9776;</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+      <!-- Hero -->
       <figure class="hero" aria-labelledby="hero-title">
-        <img src="https://picsum.photos/1600/340?random=1" alt="Kontorsbyggnad" />
-        <figcaption id="hero-title" class="visually-hidden">Get in touch</figcaption>
+        <img
+          src="https://picsum.photos/1600/340?random=1"
+          alt="Kontorsbyggnad"
+        />
+        <figcaption id="hero-title" class="visually-hidden">
+          Get in touch
+        </figcaption>
       </figure>
 
-      <!--Kontaktinfo-->
+      <!-- Kontaktsektion -->
       <section class="contact-info container" aria-labelledby="get-in-touch">
         <h2 id="get-in-touch">Get in touch</h2>
 
@@ -62,7 +88,9 @@
             <h3>New business</h3>
             <p>
               Melissa Humble<br />
-              <a href="mailto:melissa.humble@googlenews.com">melissa.humble@googlenews.com</a>
+              <a href="mailto:melissa.humble@googlenews.com"
+                >melissa.humble@googlenews.com</a
+              >
             </p>
           </div>
 
@@ -70,7 +98,9 @@
             <h3>Careers</h3>
             <p>
               <a href="mailto:job@googlenews.com">job@googlenews.com</a><br />
-              <a href="mailto:internship@googlenews.com">internship@googlenews.com</a>
+              <a href="mailto:internship@googlenews.com"
+                >internship@googlenews.com</a
+              >
             </p>
           </div>
 
@@ -84,7 +114,7 @@
         </div>
       </section>
 
-      <!--Karta-->
+      <!-- Karta -->
       <section class="map-wrap container" aria-labelledby="map-title">
         <h2 id="map-title" class="visually-hidden">Our location</h2>
         <div class="map">
@@ -94,60 +124,91 @@
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             allowfullscreen
-          ></iframe>
+          >
+          </iframe>
         </div>
       </section>
 
-      <!--Team-->
+      <!-- Team -->
       <section class="team container" aria-labelledby="team-title">
         <h2 id="team-title">Meet the team</h2>
 
         <div class="team-grid">
-          <!-- 10 placeholders -->
+          <!-- 10 platshållar-bilder -->
           <figure class="person">
-            <img src="https://picsum.photos/380/220?random=2" alt="Team member" />
+            <img
+              src="https://picsum.photos/380/220?random=2"
+              alt="Team member"
+            />
             <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
           </figure>
           <figure class="person">
-            <img src="https://picsum.photos/380/220?random=3" alt="Team member" />
+            <img
+              src="https://picsum.photos/380/220?random=3"
+              alt="Team member"
+            />
             <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
           </figure>
           <figure class="person">
-            <img src="https://picsum.photos/380/220?random=4" alt="Team member" />
+            <img
+              src="https://picsum.photos/380/220?random=4"
+              alt="Team member"
+            />
             <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
           </figure>
           <figure class="person">
-            <img src="https://picsum.photos/380/220?random=5" alt="Team member" />
+            <img
+              src="https://picsum.photos/380/220?random=5"
+              alt="Team member"
+            />
             <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
           </figure>
           <figure class="person">
-            <img src="https://picsum.photos/380/220?random=6" alt="Team member" />
+            <img
+              src="https://picsum.photos/380/220?random=6"
+              alt="Team member"
+            />
             <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
           </figure>
           <figure class="person">
-            <img src="https://picsum.photos/380/220?random=7" alt="Team member" />
+            <img
+              src="https://picsum.photos/380/220?random=7"
+              alt="Team member"
+            />
             <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
           </figure>
           <figure class="person">
-            <img src="https://picsum.photos/380/220?random=8" alt="Team member" />
+            <img
+              src="https://picsum.photos/380/220?random=8"
+              alt="Team member"
+            />
             <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
           </figure>
           <figure class="person">
-            <img src="https://picsum.photos/380/220?random=9" alt="Team member" />
+            <img
+              src="https://picsum.photos/380/220?random=9"
+              alt="Team member"
+            />
             <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
           </figure>
           <figure class="person">
-            <img src="https://picsum.photos/380/220?random=10" alt="Team member" />
+            <img
+              src="https://picsum.photos/380/220?random=10"
+              alt="Team member"
+            />
             <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
           </figure>
           <figure class="person">
-            <img src="https://picsum.photos/380/220?random=11" alt="Team member" />
+            <img
+              src="https://picsum.photos/380/220?random=11"
+              alt="Team member"
+            />
             <figcaption><strong>Melissa Humble</strong><br />CEO</figcaption>
           </figure>
         </div>
       </section>
 
-      <!--Footer (identisk som index)-->
+      <!-- Footer -->
       <footer class="site-footer" role="contentinfo">
         <div class="container footer-grid">
           <div>
@@ -174,14 +235,14 @@
         </div>
       </footer>
 
-      <!--JS (identiskt upplägg som index)-->
+      <!-- Widgets & JS -->
       <script>
         document
           .querySelectorAll("[data-year]")
           .forEach((el) => (el.textContent = new Date().getFullYear()));
       </script>
-      <script type="text/javascript" src="./assets/js/menu.js"></script>
-      <script type="text/javascript" src="./assets/js/request.js"></script>
+      <script src="./assets/js/menu.js"></script>
+      <script src="./assets/js/request.js"></script>
     </section>
   </body>
 </html>
