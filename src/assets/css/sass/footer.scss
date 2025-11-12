@@ -1,4 +1,26 @@
 /* ===== Footer ===== */
+$bg: #fff;
+$text: #111;
+$muted: #6b6b6b;
+$border: #e7e7e7;
+$link: #0b57d0;
+$container: 1120px;
+
+$bp-xl: 1200px;
+$bp-lg: 992px;
+$bp-md: 768px;
+$bp-sm: 560px;
+
+@mixin container {
+  width: min(100% - 32px, $container);
+  margin-inline: auto;
+}
+@mixin mq($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
 .site-footer {
   border-top: 1px solid $border;
   padding: 24px 0;
